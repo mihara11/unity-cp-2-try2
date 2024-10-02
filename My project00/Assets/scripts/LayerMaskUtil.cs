@@ -7,8 +7,7 @@ public static class LayerMaskUtil
     public static bool LayerMaskContainsLayer(
         LayerMask layerMask, int layer)
     {
-        if (layerMask == (layerMask | (1 << layer)))
-            return true;
-        return false;
+        return layerMask == (layerMask | (1 << layer));
+       
     }
 }
